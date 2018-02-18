@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mlibrary/vizier.svg?branch=master)](https://travis-ci.org/mlibrary/vizier?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mlibrary/vizier/badge.svg?branch=master)](https://coveralls.io/github/mlibrary/vizier?branch=master)
+
 # Vizier
 
 Vizier helps you present information appropriately.
