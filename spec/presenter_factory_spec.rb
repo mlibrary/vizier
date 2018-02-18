@@ -105,9 +105,4 @@ RSpec.describe Vizier::PresenterFactory do
     policy = SomeResourcePolicy.new(double('User'), resource)
     SomeResourcePresenter.new(policy, double('View'))
   end
-
-  def build_generic_presenter(resource)
-    policy = double('policy', resource: resource)
-    AppResourcePresenter.new(policy, double('View'))
-  end
 end
