@@ -111,7 +111,7 @@ RSpec.describe Vizier::PresenterConfig do
     let(:user)   { double('User') }
     let(:view)   { double('View') }
 
-    subject(:presenter) { presenter = class_config.present(object, user, view) }
+    subject(:presenter) { class_config.present(object, user, view) }
 
     it 'uses the configured presenter class for the presenter' do
       expect(presenter).to be_a FakePresenter
@@ -127,18 +127,10 @@ RSpec.describe Vizier::PresenterConfig do
 
     it 'sets the supplied user on the policy' do
       expect(presenter.policy.user).to eq user
-
     end
 
     it 'sets the supplied object on the policy' do
       expect(presenter.policy.object).to eq object
-    end
-  end
-
-  context 'while redefining/reloading classes' do
-    it 'gives the new type' do
-      config = class_config
-      type1 = config.type
     end
   end
 

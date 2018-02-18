@@ -12,6 +12,6 @@ RSpec.describe Vizier::ResourcePresenter do
     resource = double('Resource', name: 'a name')
     policy   = double('Policy', resource: resource)
     view     = double('View')
-    described_class.new(policy, view, presenter_factory: double())
+    described_class.new(policy, view, presenter_factory: double)
   end
 end

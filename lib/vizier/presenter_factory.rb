@@ -1,8 +1,14 @@
 # frozen_string_literal: true
 
-# Factory for locating and creating a presenter based on an object's type
 module Vizier
+  # Factory for locating and creating a presenter based on an object's type.
   class PresenterFactory
+    # Construct a factory with a mapping of types to their default presenters
+    # and policies.
+    #
+    # @param presenter_map [Hash] the mapping of classes of strings to a pair,
+    #   where the first item is the default presenter type, and the second is the
+    #   default policy type.
     def initialize(
         presenter_map = {},
         config_type: PresenterConfig,
@@ -11,7 +17,7 @@ module Vizier
       @config_type    = config_type
       @default_config = default_config
 
-      @configs = Hash.new do |configs, type|
+      @configs = Hash.new do |_configs, type|
         default_config.for(type)
       end
 
@@ -26,6 +32,6 @@ module Vizier
 
     private
 
-      attr_accessor :configs, :config_type, :default_config
+    attr_accessor :configs, :config_type, :default_config
   end
 end

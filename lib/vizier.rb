@@ -2,6 +2,7 @@
 
 require 'vizier/version'
 
+# Top level module for Vizier
 module Vizier
   # Just the constant for now
 end

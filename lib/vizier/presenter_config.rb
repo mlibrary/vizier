@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-# Mapping for a given type to presenter and policy types
-#
-# This configuration does not cache the constant lookups,
-# so it supports reloading of the types in development.
-# The CachingPresenterConfig should be used in production.
 module Vizier
+  # Mapping for a given type to presenter and policy types.
+  #
+  # This configuration does not cache the constant lookups, so it supports
+  # reloading of the types in development.  The CachingPresenterConfig should
+  # be used in production.
   class PresenterConfig
     def initialize(type, presenter, policy)
       @type_name      = type.to_s

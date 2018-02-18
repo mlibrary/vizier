@@ -3,7 +3,6 @@
 require 'vizier/null_presenter'
 
 RSpec.describe Vizier::NullPresenter do
-
   subject(:presenter) { described_class.new(object, double('View')) }
 
   it 'delegates to the presented object' do

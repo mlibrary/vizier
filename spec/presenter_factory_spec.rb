@@ -7,7 +7,6 @@ require 'vizier/read_only_policy'
 require 'vizier/null_presenter'
 
 RSpec.describe Vizier::PresenterFactory do
-
   context 'when not supplying a mapping' do
     it 'uses the NullPresenter' do
       factory = default_factory

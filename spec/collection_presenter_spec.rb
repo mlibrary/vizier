@@ -38,7 +38,7 @@ RSpec.describe Vizier::CollectionPresenter do
       items = [double(name: 'item1'), double(name: 'item2')]
       presenter = with_items(items)
 
-      expect(presenter.map(&:name)).to eq(['item1', 'item2'])
+      expect(presenter.map(&:name)).to eq(%w[item1 item2])
     end
   end
 
@@ -52,7 +52,7 @@ RSpec.describe Vizier::CollectionPresenter do
 
   def factory
     double('factory').tap do |factory|
-      allow(factory).to receive(:[]) do |resource, user, view|
+      allow(factory).to receive(:[]) do |resource, _user, _view|
         Vizier::NullPresenter.new(resource)
       end
     end

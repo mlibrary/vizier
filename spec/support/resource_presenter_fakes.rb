@@ -114,7 +114,7 @@ module FakePresenterFactory
   PRESENTERS = {
     SomeResource  => [SomeResourcePresenter, SomeResourcePolicy],
     OtherResource => [OtherResourcePresenter, OtherResourcePolicy]
-  }
+  }.freeze
 
   class << self
     def instance
