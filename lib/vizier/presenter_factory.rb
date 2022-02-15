@@ -10,11 +10,12 @@ module Vizier
     #   where the first item is the default presenter type, and the second is the
     #   default policy type.
     def initialize(
-        presenter_map = {},
-        config_type: PresenterConfig,
-        default_config: DefaultPresenterConfig.new(config_type))
+      presenter_map = {},
+      config_type: PresenterConfig,
+      default_config: DefaultPresenterConfig.new(config_type)
+    )
 
-      @config_type    = config_type
+      @config_type = config_type
       @default_config = default_config
 
       @configs = Hash.new do |_configs, type|

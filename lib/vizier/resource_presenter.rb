@@ -12,7 +12,7 @@ module Vizier
 
     def initialize(policy, view, presenter_factory: PresenterFactory.new)
       @policy = policy
-      @view   = view
+      @view = view
       @presenter_factory = presenter_factory
       __setobj__ policy.resource
     end
