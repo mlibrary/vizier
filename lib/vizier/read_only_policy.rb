@@ -8,7 +8,7 @@ module Vizier
     attr_reader :user, :resource
 
     def initialize(user, resource)
-      @user     = user
+      @user = user
       @resource = resource
     end
 

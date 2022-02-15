@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'ostruct'
-require 'vizier/presenter_factory'
-require 'vizier/resource_presenter'
+require "ostruct"
+require "vizier/presenter_factory"
+require "vizier/resource_presenter"
 
 # Example of inheriting to take advantage of auto-presentation
 
@@ -66,9 +66,9 @@ end
 class AppResourcePresenter < Vizier::ResourcePresenter
   protected
 
-    def presenter_factory
-      FakePresenterFactory.instance
-    end
+  def presenter_factory
+    FakePresenterFactory.instance
+  end
 end
 
 # This would be a specific presenter for the resource type.
@@ -92,7 +92,7 @@ end
 
 class OtherResourcePresenter < AppResourcePresenter
   def short_title
-    title[0..5] + '...'
+    title[0..5] + "..."
   end
 
   # Delegate permission checks to the policy
@@ -112,7 +112,7 @@ module FakePresenterFactory
   # object's class (or its string equivalent) is not mapped, the fall-through
   # default is to use a Vizier::NullPresenter and a Vizier::ReadOnlyPolicy.
   PRESENTERS = {
-    SomeResource  => [SomeResourcePresenter, SomeResourcePolicy],
+    SomeResource => [SomeResourcePresenter, SomeResourcePolicy],
     OtherResource => [OtherResourcePresenter, OtherResourcePolicy]
   }.freeze
 

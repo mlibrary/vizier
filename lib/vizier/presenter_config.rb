@@ -8,9 +8,9 @@ module Vizier
   # be used in production.
   class PresenterConfig
     def initialize(type, presenter, policy)
-      @type_name      = type.to_s
+      @type_name = type.to_s
       @presenter_name = presenter.to_s
-      @policy_name    = policy.to_s
+      @policy_name = policy.to_s
     end
 
     def present(object, user, view)
