@@ -24,7 +24,7 @@ And then execute:
 
 ## Compatibility
 
-Keycard is intended to be compatible with all community-supported Ruby branches (i.e., minor versions), currently:
+Vizier is intended to be compatible with all community-supported Ruby branches (i.e., minor versions), currently:
 
  - 2.6
  - 2.7
