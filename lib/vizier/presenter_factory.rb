@@ -14,7 +14,6 @@ module Vizier
       config_type: PresenterConfig,
       default_config: DefaultPresenterConfig.new(config_type)
     )
-
       @config_type = config_type
       @default_config = default_config
 
